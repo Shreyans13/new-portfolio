@@ -1,6 +1,6 @@
 <template>
   <div>
-    <n-config-provider :theme="darkTheme">
+    <n-config-provider :theme="theme">
       <Header />
       <HelloWorld msg="DARK" />
     </n-config-provider>
@@ -9,23 +9,27 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import Header from "./components/Header.vue";
-
-import { defineComponent } from "vue";
+import { defineComponent, ref } from 'vue';
 import { darkTheme } from "naive-ui";
+import { BuiltInGlobalTheme } from "naive-ui/lib/themes/interface";
+
 
 export default defineComponent({
-  setup() {
-    return {
-      darkTheme,
-    };
-  },
-  name: "App",
+  name: 'App',
   components: {
     HelloWorld,
-    Header,
+    Header
   },
+  setup () {
+    const theme = ref<BuiltInGlobalTheme>(darkTheme)
+    return {
+      theme
+    }
+  }
+  // darkTheme
 });
 </script>
+

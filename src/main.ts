@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp,h } from "vue";
 import App from "./App.vue";
 import {
   create,
@@ -11,6 +11,7 @@ import {
   NGridItem,
   NH1,
   NIcon,
+  NImage,
   NInputNumber,
   NLayout,
   NPageHeader,
@@ -38,12 +39,15 @@ const naive = create({
     NInputNumber,
     NThing,
     NIcon,
+    NImage
   ],
 });
 
 import "@/utility/margin.css";
 import "@/utility/padding.css";
-
-const app = createApp(App);
+// import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+const app = createApp({
+    render: ()=>h(App)
+});
 app.use(naive);
 app.mount("#app");
