@@ -1,5 +1,7 @@
 import { createApp,h } from "vue";
 import App from "./App.vue";
+import {store} from "./store/index";
+
 import {
   create,
   NAvatar,
@@ -50,4 +52,5 @@ const app = createApp({
     render: ()=>h(App)
 });
 app.use(naive);
+app.use(store);
 app.mount("#app");
