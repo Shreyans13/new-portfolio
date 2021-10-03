@@ -15,6 +15,7 @@
             <n-button type="success">Success</n-button>
             <n-button type="warning">Warning</n-button>
             <n-button type="error">Error</n-button>
+            <n-button :color="customColors.neonGreen"> Custom Color </n-button>
           </n-space>
         </n-grid-item>
         <n-grid-item span="2">
@@ -159,6 +160,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { mapGetters } from "vuex";
 // import { GameController } from "vfonts";
 // import { CashOutline } from '@vicons/ionicons5'
 export default defineComponent({
@@ -168,6 +170,11 @@ export default defineComponent({
   },
   components: {
     // GameController,
+  },
+  computed: {
+    ...mapGetters({
+      customColors: "customColors",
+    }),
   },
 });
 </script>

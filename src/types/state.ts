@@ -1,6 +1,6 @@
 import { BuiltInGlobalTheme } from "naive-ui/lib/themes/interface";
 
-type to = "a" | "/";
+type to = "/about" | "/";
 
 export interface NavigationItem {
     text: String,
@@ -14,6 +14,12 @@ export interface NavigationItem {
 
 export interface State {
     navigation: ReadonlyArray<NavigationItem>;
-    theme : BuiltInGlobalTheme
+    theme: BuiltInGlobalTheme;
+    currentTheme: Boolean;
+    customTheme: {
+        colors: {
+            neonGreen : String
+        }
+    }
 }
 
