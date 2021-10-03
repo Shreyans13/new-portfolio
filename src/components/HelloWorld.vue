@@ -161,15 +161,10 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { mapGetters } from "vuex";
-// import { GameController } from "vfonts";
-// import { CashOutline } from '@vicons/ionicons5'
 export default defineComponent({
   name: "HelloWorld",
   props: {
     msg: String,
-  },
-  components: {
-    // GameController,
   },
   computed: {
     ...mapGetters({
@@ -179,7 +174,6 @@ export default defineComponent({
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .carousel-img {
   width: 100%;

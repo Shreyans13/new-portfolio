@@ -48,7 +48,6 @@ const naive = create({
 import "@/utility/margin.css";
 import "@/utility/padding.css";
 import router from './router'
-// import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
 const app = createApp({
     render: ()=>h(App)
 }).use(router);

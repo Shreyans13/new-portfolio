@@ -1,10 +1,10 @@
 import { BuiltInGlobalTheme } from "naive-ui/lib/themes/interface";
 
-type to = "/about" | "/";
+type navigationLinks = "/about" | "/";
 
 export interface NavigationItem {
     text: String,
-    to: to,
+    to: navigationLinks,
     icon: String,
     meta: {
         showToolbar: Boolean,

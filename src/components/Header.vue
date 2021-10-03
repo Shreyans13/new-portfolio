@@ -26,15 +26,6 @@
             v-for="ni in topNavigation"
             :key="ni"
           />
-          <!-- <n-button text>
-            <template #icon>
-              <n-icon class="mr-3">
-                <i class="fab fa-google"></i>
-              </n-icon>
-            </template>
-            Home
-          </n-button>
-          -->
           <n-button @click="changeTheme">Change Theme</n-button>
         </n-space>
       </template>
@@ -71,6 +62,3 @@ export default defineComponent({
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>

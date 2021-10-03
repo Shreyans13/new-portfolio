@@ -1,9 +1,8 @@
-import { InjectionKey } from 'vue'
+
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import { State, NavigationItem } from "@/types/state"
 import { darkTheme } from "naive-ui";
 
-// export const key: InjectionKey<Store<State>> = Symbol()
 
 export const store = createStore<State>({
   strict: true,
@@ -52,8 +51,3 @@ export const store = createStore<State>({
   },
 	modules: {},
 })
-
-// define your own `useStore` composition function
-// export function useStore () {
-//   return baseUseStore(key)
-// }
