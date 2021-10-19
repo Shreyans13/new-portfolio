@@ -10,7 +10,9 @@
         <n-grid-item span="6">
           <n-space>
             <n-button>Default</n-button>
-            <n-button dashed type="primary">Primary</n-button>
+            <n-button dashed type="primary" @click="mixinTest('shreyans')"
+              >Mixin</n-button
+            >
             <n-button type="info">Info</n-button>
             <n-button type="success">Success</n-button>
             <n-button type="warning">Warning</n-button>
@@ -161,11 +163,14 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { mapGetters } from "vuex";
+import customNavigator from "@/router/routeNavigator";
+
 export default defineComponent({
   name: "HelloWorld",
   props: {
     msg: String,
   },
+  mixins: [customNavigator],
   computed: {
     ...mapGetters({
       customColors: "customColors",

@@ -37,13 +37,13 @@
 import { store } from "@/store";
 import { mapGetters, mapState } from "vuex";
 import { defineComponent } from "@vue/runtime-core";
-import { NavigationItem } from "@/types/state";
+import customNavigator from "@/router/routeNavigator";
 import Button from "./microComponents/Button.vue";
-import router from "@/router";
 
 export default defineComponent({
   components: { Button },
   name: "Header",
+  mixins: [customNavigator],
   computed: {
     ...mapState({ currentTheme: "currentTheme" }),
     ...mapGetters({ topNavigation: "topNavigation" }),
@@ -51,12 +51,6 @@ export default defineComponent({
   methods: {
     changeTheme() {
       store.dispatch("changeTheme");
-    },
-    handleBack() {
-      console.log("backPressed in Header");
-    },
-    navigate(link: NavigationItem) {
-      router.push({ path: link.to });
     },
   },
 });

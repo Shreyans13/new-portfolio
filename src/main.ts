@@ -1,7 +1,12 @@
 import { createApp,h } from "vue";
 import App from "./App.vue";
 import {store} from "./store/index";
+import "@/utility/margin.css";
+import "@/utility/padding.css";
+import router from './router';
+// import customNavigator from "@/router/routeNavigator";
 
+// import myMixin from '@/router/navigator'
 import {
   create,
   NAvatar,
@@ -45,12 +50,13 @@ const naive = create({
   ],
 });
 
-import "@/utility/margin.css";
-import "@/utility/padding.css";
-import router from './router'
+
 const app = createApp({
-    render: ()=>h(App)
-}).use(router);
+  render: () => h(App),
+  // mixins: [customNavigator]
+})
+// app.use(routeNavigator);
+app.use(router);
 app.use(naive);
 app.use(store);
 app.mount("#app");
