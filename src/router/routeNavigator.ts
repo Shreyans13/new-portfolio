@@ -1,7 +1,7 @@
-import router from "@/router";
 import { NavigationItem } from "@/types/state";
+import { ComponentOptionsMixin } from 'vue'
 
-const customNavigator = {
+const customNavigator: ComponentOptionsMixin = {
     created: function () {
         console.log("MyMixin.created()");
     },
@@ -16,7 +16,7 @@ const customNavigator = {
             console.log("backPressed in Header");
         },
         navigate: function(link: NavigationItem) {
-           router.push({ path: link.to });
+           this.$router.push({ path: link.to });
         }
     }
 };
