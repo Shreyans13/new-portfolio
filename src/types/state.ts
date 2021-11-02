@@ -15,10 +15,11 @@ export interface NavigationItem {
 export interface State {
     navigation: ReadonlyArray<NavigationItem>;
     theme: BuiltInGlobalTheme;
-    currentTheme: Boolean;
+    darkTheme: Boolean;
     customTheme: {
         colors: {
-            neonGreen : String
+            neonGreen: String
+            black: String
         }
     }
 }

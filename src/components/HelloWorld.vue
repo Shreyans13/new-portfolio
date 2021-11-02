@@ -1,10 +1,14 @@
 <template>
   <div class="hello">
-    <n-layout embedded content-style="padding: 10px;">
+    <n-layout
+      embedded
+      content-style="padding: 10px;"
+      :class="darkTheme ? 'layout-color' : 'light-layout-color'"
+    >
       <n-grid cols="8" responsive="screen">
         <n-grid-item span="2">
           <n-h1
-            ><n-text>THEME : {{ msg }}</n-text></n-h1
+            ><n-text>THEME : {{ darkTheme }}</n-text></n-h1
           >
         </n-grid-item>
         <n-grid-item span="6">
@@ -162,7 +166,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 import customNavigator from "@/router/routeNavigator";
 
 export default defineComponent({
@@ -175,6 +179,9 @@ export default defineComponent({
     ...mapGetters({
       customColors: "customColors",
     }),
+    ...mapState({
+      darkTheme: "darkTheme",
+    }),
   },
 });
 </script>
@@ -184,5 +191,11 @@ export default defineComponent({
   width: 100%;
   height: 240px;
   object-fit: cover;
+}
+.layout-color {
+  background-color: blueviolet;
+}
+.light-layout-color {
+  background-color: aquamarine;
 }
 </style>

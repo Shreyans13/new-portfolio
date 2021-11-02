@@ -8,10 +8,11 @@ export const store = createStore<State>({
   strict: true,
   state: {
     theme: darkTheme,
-    currentTheme: true,
+    darkTheme: true,
     customTheme: {
         colors: {
-            neonGreen : "#39FF14"
+          neonGreen : "#39FF14",
+          black : "#2d2f33"
         }
     },
     navigation: [{
@@ -41,7 +42,8 @@ export const store = createStore<State>({
     },
   mutations: {
     toggleTheme(state: State) {
-      state.currentTheme = state.currentTheme ? false : true;
+      state.darkTheme = state.
+        darkTheme ? false : true;
       }
     },
   actions: {

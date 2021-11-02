@@ -1,11 +1,12 @@
 <template>
   <div id="nav">
-    <n-config-provider :theme="currentTheme ? theme : ''">
+    <n-config-provider :theme="darkTheme ? theme : ''">
       <Header />
     </n-config-provider>
   </div>
-  <n-config-provider :theme="currentTheme ? theme : ''">
-    <n-layout embedded content-style="padding: 10px;">
+  <n-config-provider :theme="darkTheme ? theme : ''">
+    <n-layout embedded>
+      <!-- content-style="padding: 10px;" -->
       <router-view />
     </n-layout>
   </n-config-provider>
@@ -25,7 +26,7 @@ export default defineComponent({
       topNavigation: "topNavigation",
       customColors: "customColors",
     }),
-    ...mapState({ theme: "theme", currentTheme: "currentTheme" }),
+    ...mapState({ theme: "theme", darkTheme: "darkTheme" }),
   },
 });
 </script>
