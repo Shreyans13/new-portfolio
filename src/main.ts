@@ -1,10 +1,11 @@
 import { createApp,h } from "vue";
 import App from "./App.vue";
 import {store} from "./store/index";
-import "@/utility/margin.css";
-import "@/utility/padding.css";
+// import "@/utility/margin.css";
+// import "@/utility/padding.css";
 import router from './router';
 // import customNavigator from "@/router/routeNavigator";
+
 
 // import myMixin from '@/router/navigator'
 import {
@@ -17,6 +18,8 @@ import {
   NGrid,
   NGridItem,
   NH1,
+  NH2,
+  NP,
   NIcon,
   NImage,
   NInputNumber,
@@ -26,6 +29,7 @@ import {
   NSpace,
   NText,
   NThing,
+  NStatistic
 } from "naive-ui";
 
 const naive = create({
@@ -37,6 +41,8 @@ const naive = create({
     NGrid,
     NGridItem,
     NH1,
+    NH2,
+    NP,
     NText,
     NCard,
     NCarousel,
@@ -46,7 +52,8 @@ const naive = create({
     NInputNumber,
     NThing,
     NIcon,
-    NImage
+    NImage,
+    NStatistic
   ],
 });
 

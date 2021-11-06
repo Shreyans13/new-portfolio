@@ -1,6 +1,10 @@
 <template>
-  <n-layout embedded content-style="padding: 10px;">
-    <n-page-header :subtitle="darkTheme ? 'DARK' : 'LIGHT'" @back="handleBack">
+  <n-layout
+    embedded
+    content-style="padding: 10px;"
+    :class="darkTheme ? 'dark-layout-color' : 'light-layout-color'"
+  >
+    <n-page-header @back="handleBack">
       <template #avatar>
         <n-avatar src="https://avatars.githubusercontent.com/u/50544190?v=4" />
       </template>

@@ -15,7 +15,6 @@
 import Header from "./components/Header.vue";
 import { defineComponent } from "vue";
 import { mapGetters, mapState } from "vuex";
-
 export default defineComponent({
   name: "App",
   components: {
@@ -32,3 +31,14 @@ export default defineComponent({
 </script>
 
 
+<style>
+.dark-layout-color {
+  background-color: #2d2f33;
+}
+.light-layout-color {
+}
+
+.displayed {
+  background-color: blueviolet;
+}
+</style>

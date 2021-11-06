@@ -3,7 +3,7 @@
     <n-layout
       embedded
       content-style="padding: 10px;"
-      :class="darkTheme ? 'layout-color' : 'light-layout-color'"
+      :class="darkTheme ? 'dark-layout-color' : 'light-layout-color'"
     >
       <n-grid cols="8" responsive="screen">
         <n-grid-item span="2">
@@ -192,10 +192,5 @@ export default defineComponent({
   height: 240px;
   object-fit: cover;
 }
-.layout-color {
-  background-color: blueviolet;
-}
-.light-layout-color {
-  background-color: aquamarine;
-}
+
 </style>
