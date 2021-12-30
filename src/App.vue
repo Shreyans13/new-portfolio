@@ -38,6 +38,11 @@ export default defineComponent({
 .light-layout-color {
 }
 
+.dark-layout-color-2 {
+  background-color: #25262a;
+}
+.light-layout-color-2 {
+}
 .displayed {
   background-color: blueviolet;
 }

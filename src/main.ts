@@ -29,7 +29,8 @@ import {
   NSpace,
   NText,
   NThing,
-  NStatistic
+  NStatistic,
+  NTag
 } from "naive-ui";
 
 const naive = create({
@@ -43,6 +44,7 @@ const naive = create({
     NH1,
     NH2,
     NP,
+    NTag,
     NText,
     NCard,
     NCarousel,

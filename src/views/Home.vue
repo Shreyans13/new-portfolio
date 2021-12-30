@@ -43,6 +43,109 @@
         </n-layout>
       </n-gi>
     </n-grid>
+
+    <n-grid
+      :cols="2"
+      :class="darkTheme ? 'dark-layout-color-2' : 'light-layout-color-2'"
+    >
+      <n-gi>
+        <n-layout
+          class="m-5 p-3"
+          :class="darkTheme ? 'dark-layout-color-2' : 'light-layout-color-2'"
+        >
+          <n-space vertical>
+            <n-card class="card-background" size="small">
+              <template #header> Github-Profile-Finder</template>
+
+              <template #footer>
+                <n-space>
+                  <n-tag type="success">Github </n-tag>
+                  <n-tag type="warning"> Flutter </n-tag>
+                  <n-tag type="error"> Android </n-tag>
+                  <n-tag type="info">IOS </n-tag>
+                </n-space>
+
+                <n-space class="mt-2">
+                  <n-button type="success">
+                    <template #icon>
+                      <n-icon>
+                        <i class="far fa-star"></i>
+                      </n-icon>
+                    </template>
+                    5
+                  </n-button>
+                  <n-button type="info">
+                    <template #icon>
+                      <n-icon>
+                        <i class="fas fa-code-branch"></i>
+                      </n-icon>
+                    </template>
+                    5
+                  </n-button>
+                  <n-button text>
+                    <template #icon>
+                      <n-icon>
+                        <i class="fab fa-vuejs"></i>
+                      </n-icon>
+                    </template>
+                    5
+                  </n-button>
+                </n-space>
+              </template>
+              A flutter application which uses Github api to share Github
+              Profile.
+            </n-card>
+
+            <n-card
+              class="card-background"
+              size="small"
+              v-for="i in 2"
+              :key="i"
+            >
+              <template #header>Eats</template>
+
+              <template #footer>
+                <n-space>
+                  <n-tag type="success"> Yes It Is </n-tag>
+                  <n-tag type="warning"> I'm Down </n-tag>
+                  <n-tag type="error"> Real Love </n-tag>
+                  <n-tag type="info"> I'm Looking Through You </n-tag>
+                </n-space>
+
+                <n-space class="mt-2">
+                  <n-button type="success">
+                    <template #icon>
+                      <n-icon>
+                        <i class="far fa-star"></i>
+                      </n-icon>
+                    </template>
+                    5
+                  </n-button>
+                  <n-button type="info">
+                    <template #icon>
+                      <n-icon>
+                        <i class="fas fa-code-branch"></i>
+                      </n-icon>
+                    </template>
+                    5
+                  </n-button>
+                  <n-button text>
+                    <template #icon>
+                      <n-icon>
+                        <i class="fab fa-vuejs"></i>
+                      </n-icon>
+                    </template>
+                    5
+                  </n-button>
+                </n-space>
+              </template>
+              A UI/UX design for a Food delivery application based on a real
+              life scenario made with Vue.js and Vuetify.
+            </n-card>
+          </n-space>
+        </n-layout>
+      </n-gi>
+    </n-grid>
   </div>
 </template>
 
@@ -67,5 +170,8 @@ export default defineComponent({
 <style scoped>
 .black {
   background-color: #28292d;
+}
+.card-background {
+  background-color: #2d2e32;
 }
 </style>
